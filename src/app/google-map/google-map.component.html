@@ -1,0 +1,13 @@
+<div>
+    <div class="jp-mobile-google-map-view " role="presentation" (click)="onMapIconClick()">
+    </div>
+    <ng-container *ngIf="!IsMapIconClicked; else elseTemplate">
+       <div class="jp-mobile-google-map">
+       </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+    
+       <ng-content></ng-content>
+       
+    </ng-template> 
+ </div>

@@ -1,0 +1,32 @@
+<div class="jp-collapse-app" *ngFor="let result of data; let i = index">
+    <section class="jp-collapse-section">
+      <div class="jp-collapse-comp-parent jp-collapse-outline">
+        <div class="jp-collapse-flex-container">
+          <div class="jp-collapse-comp-heading">{{result.title}}</div>
+          <div class="jp-collapse-separator-heading jp-collapse-line"></div>
+          <div class="jp-collapse-position-relative jp-collapse-outline">
+            <span id="0" class="ui-hidden-accessible" style="visibility: hidden;">{{result.title}}
+            </span>
+            <i role="button" aria-labelledby="0" aria-expanded="false" tabindex="0"
+              [ngClass]="result.expanded ? 'jp-collapse-accordian-arrow jp-collapse-arrow-up jp-collapse-outline' : 'jp-collapse-accordian-arrow jp-collapse-arrow-down jp-collapse-outline'"
+              (click)="viewConditions(i)">
+            </i>
+          </div>
+        </div>
+        <div class="jp-collapse-outline" [ngClass]="result.expanded ? 'ui-visible' : 'ui-hidden'" *ngFor="let items of result.subtitle">
+          <div class="ReactCollapse--content">
+            <div role="button" aria-expanded="false" tabindex="-1" class="jp-collapse-outline">
+              <div aria-expanded="false">
+                <div class="jp-collapse-child-title jp-collapse-outline">
+                  {{items.name}}
+                </div>
+                <div class="jp-collapse-child-content" >
+                  {{items.data}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>

@@ -1,0 +1,105 @@
+<div class="DesktopCalendar" (appEventClick)="ClosePopup()">
+    <div [className]="(Hover1 || CalendarVisible) && !CalendarVisible1 ?'hsw_inputBox dates inactiveWidget CheckInbox1':'hsw_inputBox dates inactiveWidget CheckInbox'"
+        (mouseover)='Hover1=true' (mouseout)='Hover1=false' (click)='CheckInBlock()'>
+        
+            <label for="checkin" class="innerCheckInbox">
+                <span
+                    [className]="!CalendarVisible?'lbl_input latoBold appendBottom5 code':'lbl_input1 latoBold1 appendBottom5'">CHECK-IN</span>
+                <p data-cy="checkOutDate" class="blackText font20 code"><span
+                        class="font30 lineHeight36 latoBlack">{{HeaderDate1.split('-')[0]}}</span><span> {{HeaderDate1.split('-')[1]}} '</span><span
+                        class="shortYear">{{HeaderDate1.split('-')[2]}}</span></p>
+                <p class="code">{{HeaderDate1.split('-')[3]}}</p>
+            </label>
+    
+
+        <!-- Calendar code -->
+
+    </div>
+    <div *ngIf='CalendarVisible || CalendarVisible1' class="datePickerContainer">
+        <div class="hotelCalOverlay">
+            <div class="dayPickerHotelWrap">
+                <div class="RangeExample">
+                    <div class="dayPickerHeader dayToFromCont blackText">
+                        <div class="calHeading makeFlex">
+                            <div [className]="CalendarVisible?'dateFiled active':'dateFiled'" (click)='CheckInBlock()'>
+                                <p class="font16 blackText latoBold appendRight30"><span
+                                        class="widgetSprite icCalendar appendRight10"></span><span
+                                        class="selectedDateField appendBottom8 pointer latoBold">
+                                        {{label1}}</span></p>
+                            </div>
+                            <div class="font16 blackText latoBlack dashed appendRight30"> - </div>
+                            <div [className]="CalendarVisible1?'dateFiled active':'dateFiled'"
+                                (click)='CheckOutBlock()'>
+                                <p class="font16 blackText latoBold"><span
+                                        class="widgetSprite icCalendar appendRight10"></span><span
+                                        class="selectedDateField appendBottom8 pointer latoBold">{{label2}}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DayPicker Selectable Range">
+                        <div class="DayPicker-wrapper">
+                            <div class="DayPicker-NavBar"><span tabindex="0" (click)="PreviousMonth()" role="button" aria-label="Previous Month"
+                                    [className]="PreviousArrow?'DayPicker-NavButton DayPicker-NavButton--prev1':'DayPicker-NavButton DayPicker-NavButton--prev'"></span><span tabindex="0"
+                                    (click)="NextMonth()" role="button" aria-label="Next Month"
+                                    [className]="NextArrow?'DayPicker-NavButton DayPicker-NavButton--next1':'DayPicker-NavButton DayPicker-NavButton--next'"></span></div>
+                            <div class="DayPicker-Months">
+                                <div class="DayPicker-Month" role="grid">
+                                    <div class="DayPicker-Caption" role="heading">
+                                        <div>{{MonthTitle1.split('-')[0]}}<span>{{MonthTitle1.split('-')[1]}}</span></div>
+                                    </div>
+                                    <div class="DayPicker-Weekdays" role="rowgroup">
+                                        <div class="DayPicker-WeekdaysRow" role="row">
+                                            <div *ngFor="let Weekdays of WeekDays" class="DayPicker-Weekday" role="columnheader"><abbr
+                                                    title="{{Weekdays.title}}">{{Weekdays.label}}</abbr></div>
+                                        </div>
+                                    </div>
+                                    <div class="DayPicker-Body" role="rowgroup">
+                                        <div class="DayPicker-Week" *ngFor="let month1 of ArrayMonth" role="row">
+                                            <div *ngFor="let month5 of month1.Week" [className]="month5.outside?'DayPicker-Day  DayPicker-Day--outside':month5.disable? 'DayPicker-Day DayPicker-Day--disabled':month5.start?'DayPicker-Day DayPicker-Day--start':month5.end?'DayPicker-Day DayPicker-Day--end':month5.selected?'DayPicker-Day DayPicker-Day--selected':'DayPicker-Day'"
+                                            (click)="OnDateClick(month5.date,month5.outside,month5.disable)"   role="gridcell" >{{month5.day}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="DayPicker-Month" role="grid">
+                                    <div class="DayPicker-Caption" role="heading">
+                                        <div>{{MonthTitle2.split('-')[0]}}<span>{{MonthTitle2.split('-')[1]}}</span></div>
+                                    </div>
+                                        <div class="DayPicker-Weekdays" role="rowgroup">
+                                        <div class="DayPicker-WeekdaysRow" role="row">
+                                            <div *ngFor="let Weekdays of WeekDays" class="DayPicker-Weekday" role="columnheader"><abbr
+                                                title="{{Weekdays.title}}">{{Weekdays.label}}</abbr></div>
+                                        </div>
+                                      </div>
+                                    <div class="DayPicker-Body" role="rowgroup">
+                                        <div class="DayPicker-Week" *ngFor="let month1 of ArrayMonth1" role="row">
+                                            <div *ngFor="let month5 of month1.Week" [className]="month5.outside?'DayPicker-Day  DayPicker-Day--outside':month5.disable? 'DayPicker-Day DayPicker-Day--disabled':month5.start?'DayPicker-Day DayPicker-Day--start':month5.end?'DayPicker-Day DayPicker-Day--end':month5.selected?'DayPicker-Day DayPicker-Day--selected':'DayPicker-Day'"
+                                            (click)="OnDateClick(month5.date,month5.outside,month5.disable)"   role="gridcell" >{{month5.day}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div [className]=" (CalendarVisible1 || Hover2) && !CalendarVisible?'hsw_inputBox dates inactiveWidget shiftModal CheckOutbox1':'hsw_inputBox dates inactiveWidget shiftModal CheckOutbox'"
+        (mouseover)='Hover2=true' (mouseout)='Hover2=false' (click)='CheckOutBlock()'>
+            <label for="checkout" class="innerCheckOutbox">
+                <span
+                    [className]="!CalendarVisible1?'lbl_input latoBold appendBottom5 code':'lbl_input1 latoBold1 appendBottom5'">CHECK-OUT</span>
+                <p data-cy="checkOutDate" class="blackText font20 code"><span
+                        class="font30 lineHeight36 latoBlack">{{HeaderDate2.split('-')[0]}}</span><span> {{HeaderDate2.split('-')[1]}} '</span><span
+                        class="shortYear">{{HeaderDate2.split('-')[2]}}</span></p>
+                <p class="code">{{HeaderDate2.split('-')[3]}}</p>
+            </label>
+            <p class="dateErrorMsg whiteText" id="range_error" style="display: none;">You are booking hotel for more
+                than 30
+                days</p>
+  
+    </div>
+
+
+</div>

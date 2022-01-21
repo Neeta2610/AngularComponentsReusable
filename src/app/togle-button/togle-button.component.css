@@ -1,0 +1,86 @@
+.jp-container-toggle-button{
+    font-family: "Montserrat-regular", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 19px;
+    letter-spacing: 0.26px;
+    color: #4d1028;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.jp-container-toggle-button input{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.jp-container-toggle-button.disabled{
+    opacity: 0.54;
+    cursor: default;
+    color: #5d5b62;
+}
+
+.jp-container-toggle-button.disabled .jp-toggle-slider{
+    cursor: default;
+}
+
+.jp-container-toggle-button .jp-toggle-button{
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 14px;
+    margin-right: 19px;
+}
+
+.jp-container-toggle-button .jp-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #cfcfd1;
+    border-radius: 14px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.jp-container-toggle-button .jp-toggle-slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: -4px;
+    bottom: -4px;
+    background-color: #f1f1f1;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.jp-container-toggle-button input:checked + .jp-toggle-button .jp-toggle-slider {
+    background-color:#c47a97c7!important;;
+}
+
+.jp-container-toggle-button input:checked + .jp-toggle-button .jp-toggle-slider::before {
+    background-color: #ae285d;
+    border: 1px solid #ae285d;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.jp-toggle-label-text{
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.9px;
+}

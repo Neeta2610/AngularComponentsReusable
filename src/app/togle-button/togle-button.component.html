@@ -1,0 +1,7 @@
+<label [className]="disable?'jp-container-toggle-button  disabled':'jp-container-toggle-button'">
+    <input type="checkbox" (change)="onToggleChange($event)" [disabled]='disable'>
+    <span class="jp-toggle-button">
+        <span class="jp-toggle-slider"></span>
+    </span>
+    <span class="jp-toggle-label-text">{{ToggleLable}}</span>
+</label>

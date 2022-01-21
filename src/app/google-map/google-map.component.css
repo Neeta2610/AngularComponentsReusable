@@ -1,0 +1,105 @@
+
+.jp-mobile-google-map-view{
+    background-image:url('../../assets/img/index.png');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  
+}
+
+.jp-mobile-google-map-view button
+{
+  outline: none;
+  border: none;
+}
+
+.jp-mobile-google-map{
+  position: relative;
+  z-index: 99;
+}
+
+.gm-style .gm-style-mtc label,
+.gm-style .gm-style-mtc div {
+ font-weight:400
+}
+
+
+.gm-control-active>img {
+    box-sizing:content-box;
+    display:none;
+    left:50%;
+    pointer-events:none;
+    position:absolute;
+    top:50%;
+    transform:translate(-50%,-50%)
+   }
+   .gm-control-active>img:nth-child(1) {
+    display:block
+   }
+   .gm-control-active:hover>img:nth-child(1),
+   .gm-control-active:active>img:nth-child(1) {
+    display:none
+   }
+   .gm-control-active:hover>img:nth-child(2),
+   .gm-control-active:active>img:nth-child(3) {
+    display:block
+   }
+
+   
+   .gm-style-pbc {
+    transition:opacity ease-in-out;
+    background-color:rgba(0,0,0,0.45);
+    text-align:center
+   }
+   .gm-style-pbt {
+    font-size:22px;
+    color:white;
+    font-family:Roboto,Arial,sans-serif;
+    position:relative;
+    margin:0;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%)
+   }
+   
+   .gm-style img {
+    max-width: none;
+   }
+   .gm-style {
+    font: 400 11px Roboto, Arial, sans-serif;
+    text-decoration: none;
+   }
+   
+
+   .gm-ui-hover-effect {
+    opacity:.6
+   }
+   .gm-ui-hover-effect:hover {
+    opacity:1
+   }
+
+   
+   .gm-style .gm-style-cc span,
+.gm-style .gm-style-cc a,
+.gm-style .gm-style-mtc div {
+ font-size:10px;
+ box-sizing:border-box
+}
+
+.gm-svpc
+    {
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+        border-radius: 2px;
+        width: 40px;
+        cursor: url("https://maps.gstatic.com/mapfiles/openhand_8_8.cur"), default;
+        touch-action: none;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+

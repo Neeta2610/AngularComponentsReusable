@@ -1,0 +1,16 @@
+<div class="row" [style.height]='height' [style.width]='width' (mouseover)='mouseOver()' (mouseout)='mouseOut()'>
+    <div class='inner123' [style.width]='InnerWidth' [style.transform]='transform'>
+        <div *ngFor="let Img of InnerImage"  class='column' [style.width]='width' >
+            <img  src={{Img}} />
+        </div>
+    </div>
+            <div *ngIf='ShowDots' class='outerdots'>
+                <span *ngFor="let Img of InnerImage; index as i " [className]="i===activeindex? 'innerdotsgrey':'innerdotswhite'" ></span>
+            </div> 
+            <div *ngIf='ShowArrow && !SlideOnHover' class="button-wrapper">
+                <button [className]="activeindex!==0?'left-arrow':''" (click)='handleLeftClick()'>
+                </button>
+                <button [className]="InnerImage.length-1!==activeindex?'right-arrow':''" (click)='handleRightClick()'>
+                </button>
+            </div>   
+</div>

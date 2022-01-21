@@ -1,0 +1,66 @@
+<div (appEventClick)="ClosePopup()" id='paxcode'>
+    <div (click)="PopUpVisible=true" (mouseover)='mouseOver()' (mouseout)='mouseOut()'
+        [className]="MouseOver || PopUpVisible?'BackgroundHover hsw_inputBox roomGuests':'BackgroundHover1 hsw_inputBox roomGuests'">
+
+        <label for="guest">
+            <span data-cy="guestLabel"
+                [className]="PopUpVisible?'lbl_input1 latoBold1 appendBottom5':'lbl_input latoBold appendBottom5'">ROOMS
+                &amp; GUESTS</span>
+            <input id="guest" type="text" class="hsw_inputField guests font20" readonly="">
+            <p data-cy="roomGuestCount" class="blackText font20 code">
+                <span class="appendRight10"><span class="font30 lineHeight36  latoBlack">{{TotalRoom}}</span>
+                    <span> Room </span><span class="font30 lineHeight36 latoBlack">{{TotalGuest}}</span><span>
+                        Guests</span>
+                </span></p>
+        </label>
+    </div>
+    <div class="roomsGuests" *ngIf="PopUpVisible">
+        <div class="roomsGuestsTop">
+            <div class="addRoomRow" *ngFor="let pax of PaxConfigArray;index as i;">
+                <div class="addRoomLeft">
+                    <p class="darkText font16 latoBlack capText">Room {{i+1}}</p>
+                </div>
+                <div class="addRoomRight">
+                    <div *ngIf="pax.Edit" class="addRooomDetails">
+                        <p class="appendBottom15 makeFlex spaceBetween">
+                            <span class="latoBold font12 grayText">ADULTS (12y +) </span>
+                            <a *ngIf="PaxConfigArray.length>1" (click)="RemoveRoom(i)"
+                                class="font12 appendLeft250">Remove </a>
+                        </p>
+
+                        <ul class="guestCounter font12 darkText">
+                            <li *ngFor="let Adult of counter(pax.Adult); index as A"
+                                [className]="(A+1)===pax.DefAdult?'selected':''" (click)="AdultClick(i,A+1)">{{A+1}}
+                            </li>
+                        </ul>
+                        <p class="latoBold font12 grayText appendBottom10">CHILDREN (Age 12y and below)</p>
+                        <ul class="guestCounter font12 darkText">
+                            <li *ngFor="let Children of counter(pax.Children); index as C"
+                                [className]="C===pax.DefChild?'selected':''" (click)="ChildClick(i,C)">{{C}}</li>
+                        </ul>
+                        <ul *ngIf="pax.Child.length>0" class="childAgeList appendBottom10">
+                            <li *ngFor="let ChildAge of pax.Child; index as innerChild"><span  class="latoBold font12 grayText appendBottom10">CHILD {{innerChild+1}}
+                                    AGE</span><label class="lblAge">
+                                        <select class="ageSelectBox" (change)="onChildAgeChange($event.target.value,i,innerChild)">
+                                        <option *ngFor="let Age2 of counter(MaxChildAge);index as Age" [value]="Age+1" [selected]="ChildAge.Age===Age+1?true:false">{{Age+1}}</option>
+                                    </select>
+                                </label></li>
+                        </ul>
+                        <p *ngIf="pax.Error" class="redText font11">{{pax.ErrorText}}</p>
+                    </div>
+                    <div *ngIf="!pax.Edit" class="editRoom">
+                        <p class="makeFlex end"><span class="font16 blackText"><span
+                                    class="latoBlack">{{pax.DefAdult}}</span>
+                                Adults,<span class="latoBlack"> {{pax.DefChild}}</span> Children</span>
+                            <a class="font12 appendLeft10" (click)="EditRoom(i)">Edit </a></p>
+                        <a class="font12" (click)="RemoveRoom(i)">Remove</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="roomsGuestsBottom">
+            <button (click)="AddMoreRoom()" type="button" class="btnAddRoom">+ ADD ANOTHER ROOM</button>
+            <button (click)="ClosePopup()" type="button" class="primaryBtn btnApply">APPLY</button>
+        </div>
+    </div>
+</div>

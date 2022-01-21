@@ -1,0 +1,584 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: #4a4a4a;
+    font-size: 14px;
+    font-family: Lato,sans-serif;
+    font-weight: 400;
+}
+.widgetSection .hsw .hsw_inputBox {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-right: 0;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.hsw_inputBox.roomGuests {
+    width: 245px;
+    height: 100px;
+    border: solid 1px #e7e7e7;
+    position: relative;
+}
+.hsw_inputBox.roomGuests .lbl_input:after{
+    border: solid #ae285d;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    content: "";
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    vertical-align: top;
+    margin: 3px 0 0 8px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.hsw_inputBox.roomGuests .lbl_input1:after{
+    border: solid #ae285d;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    content: "";
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    vertical-align: top;
+    margin: 6px 0 0 8px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+
+
+ .hsw_inputBox {
+    background: rgba(255,255,255, 0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-right: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    position: relative;
+}
+.hsw_inputBox.roomGuests label {
+    padding-bottom: 29px;
+}
+ .hsw_inputBox label {
+    padding: 10px 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+ .lbl_input {
+    text-transform: uppercase;
+
+}
+
+.appendBottom5 {
+    margin-bottom: 5px;
+}
+.latoBold1 {
+    font-weight: 700;
+    color: #ae285d;
+
+}
+.latoBold {
+    font-weight: 700;
+    font-family: Montserrat-bold;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+
+}
+ .hsw_inputField.guests {
+    min-width: 215px;
+}
+
+.hsw_inputBox.dates input, .hsw_inputBox.roomGuests input {
+    opacity: 0;
+    position: absolute;
+}
+
+ .hsw_inputField {
+    border: 0;
+    outline: 0;
+    background: none;
+    min-width: 140px;
+    cursor: pointer;
+}
+.hsw_inputBox input {
+    font-family: 'Lato', sans-serif;
+}
+.font20 {
+    font-size: 20px;
+    line-height: 20px;
+}
+.blackText {
+    color: #000;
+}
+.appendRight10 {
+    margin-right: 10px;
+}
+.hsw_inputBox .lineHeight36 {
+    line-height: 36px;
+}
+.latoBlack {
+    font-weight: 900;
+}
+.font30 {
+    font-size: 30px;
+    line-height: 30px;
+}
+ .roomsGuests {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 560px;
+    z-index: 10;
+    margin-top: -64px;
+}
+.BackgroundHover{
+    background-color: antiquewhite;
+}
+.BackgroundHover1{
+    background-color:white;
+}
+
+
+/* bottom css */
+ .roomsGuestsBottom {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+ .btnAddRoom {
+    width: 200px;
+    height: 32px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: solid 1px #ae285d;
+    display: -webkit-inline-box;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    color: #ae285d;
+    outline: 0;
+}
+
+ .btnApply {
+    width: 88px;
+    height: 32px;
+}
+
+.primaryBtn {
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    border-radius: 34px;
+    background-color:#ae285d ;
+    -webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    text-align: center;
+}
+
+/* Room Guest-Top Css */
+.roomsGuestsTop {
+    padding: 20px;
+    padding-top: 2px;
+}
+.addRoomRow:last-child {
+    border-bottom: 0;
+}
+.addRoomRow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 18px 0;
+    border-bottom: 1px #e7e7e7 solid;
+}
+.addRoomRow .addRoomLeft {
+    width: 100%;
+}
+.latoBlack {
+    font-weight: 900;
+}
+.font16 {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.capText {
+    text-transform: uppercase;
+}
+.addRoomRow .addRoomRight {
+    width: 100%;
+}
+.makeFlex.spaceBetween {
+    justify-content: space-between;
+}
+.makeFlex.spaceBetween {
+    justify-content: space-between;
+}
+.makeFlex.spaceBetween {
+    justify-content: space-between;
+}
+.makeFlex.spaceBetween {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.makeFlex.spaceBetween {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.appendBottom15 {
+    margin-bottom: 15px;
+}
+.makeFlex {
+    display: flex;
+}
+.addRoomRow .guestCounter {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 24px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.font12 {
+    font-size: 12px;
+    line-height: 12px;
+}
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+.addRoomRow .guestCounter:last-child {
+    margin-bottom: 0;
+}
+ .addRoomRow .guestCounter {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 24px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.font12 {
+    font-size: 12px;
+    line-height: 12px;
+}
+ .addRoomRow .guestCounter li.selected {
+    color: #fff;
+    font-weight: 900;
+}
+ .addRoomRow .guestCounter li.selected {
+    color: #fff;
+    font-weight: 900;
+}
+
+ .addRoomRow .guestCounter li {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    width: 36px;
+    height: 32px;
+    position: relative;
+    z-index: 2;
+}
+.addRoomRow .guestCounter li.selected:after {
+    width: 100%;
+    height: 38px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: "";
+    background: #ae285d;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+.appendBottom10 {
+    margin-bottom: 10px;
+}
+.childAgeList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+/* Edit Of Edit romm */
+.addRoomRow .editRoom {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.makeFlex {
+    display: flex;
+}
+.makeFlex.end {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+.font16 {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.blackText {
+    color: #000;
+}
+a {
+    color:#ae285d;
+    text-decoration: none;
+    cursor: pointer;
+}
+.appendLeft10 {
+    margin-left: 10px;
+}
+.redText {
+    color: #eb2026;
+}
+.font11 {
+    font-size: 11px;
+    line-height: 11px;
+}
+
+/* Child age  Component */
+.lblAge:after {
+    top: 14px;
+    right: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 4px;
+    margin-left: -4px;
+}
+.childAgeList li label {
+    padding: 0;
+}
+.hsw_inputBox.roomGuests label {
+    padding-bottom: 28px;
+}
+.lblAge {
+    position: relative;
+}
+.ageSelectBox {
+    margin-top: 7px;
+    width: 88%;
+    height: 32px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    outline: 0;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 5px 10px 5px 15px;
+    font-size: 12px;
+    color: #4a4a4a;
+}
+.hsw_inputBox label {
+    padding: 10px 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+.hsw_inputBox.roomGuests label {
+    padding-bottom: 29px;
+}
+.font12 {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.latoBold {
+    font-weight: 700;
+}
+.childAgeList li label {
+    padding: 0;
+}
+.lblAge:after {
+    top: 14px;
+    right: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 4px;
+    margin-left: -4px;
+}

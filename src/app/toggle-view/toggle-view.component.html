@@ -1,0 +1,8 @@
+<div class="jp-desktop-toggel-view">
+    <div class="gridActive" role="button" tabindex="0" aria-label="Grid" *ngFor="let result of images; let i = index"
+     [ngClass]="result.active ? 'jp-desktop-toggel-view-active' : 'jp-desktop-toggel-view-inactive'"
+     >
+        <img src="{{!result.active  ?  result.ActiveSrc : result.InActiveSrc}}" alt="Grid" width="20" height="20"
+            (click)="changeImage(i)" />
+    </div>
+</div>

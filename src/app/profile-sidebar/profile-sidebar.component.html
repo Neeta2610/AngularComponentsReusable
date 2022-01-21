@@ -1,0 +1,30 @@
+<div class="jp-desktop-account-container ">
+    <div>
+      <div>
+        <div class="jp-user-info-div">
+          <div tabindex="0" role="link" aria-label="profile picture"
+          class="jp-user-image">
+          <img src="{{data.ProfileImage}}" alt="profile" />
+  </div>
+
+          <div tabindex="0" role="link" aria-label="Varun Arora" class="jp-user-name">
+            {{data.ProfileName}}
+          </div>
+          <div tabindex="0" role="link" aria-label="Platinum Member" class="jp-member-type">
+            {{data.ProfileType}}
+          </div>
+          <div tabindex="0" role="link" aria-label="JP no : 212633466" class="jp-number">
+            JP NO : {{data.ProfileNumber}}
+          </div>
+        </div>
+      </div>
+      <div>
+        <ul class="jp-element-link-div">
+          <li *ngFor="let result of data.ProfileBody; let i=index" [ngClass]="result.isSelected ? 'jp-desktop-link-active' : 'jp-desktop-link-inactive'">
+            <span role="link" tabindex="0" class="jp-desktop-list-text" aria-label=""
+              aria-live="" (click)="selectedLink(i)" >{{result.name}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,13 @@
+<div class="row" [style.height]='height' [style.width]='innerwidth'>
+    <div class='inner123' [style.width]='InnerWidth' [style.transform]='transform'>
+        <div *ngFor="let Img of ThumbnailSliderImges ; index as i"  class='column' [style.width]='width' >
+            <img src={{Img}} [className]="i===innerhoverdata?'HoverSide':''" (mouseover)="OnHoverEvent?mouseOver(i):''" />
+        </div>
+        
+    </div>
+    <div *ngIf="OnShowArrow"  class="button-wrapper">
+        <button [className]="activeindex!==0?'left-arrow':''" (click)='handleLeftClick()'>
+        </button>
+        <button  [className]="ThumbnailSliderImges.length-CardsVisible!==activeindex?'right-arrow':''" (click)='handleRightClick()'>
+        </button>
+    </div>  

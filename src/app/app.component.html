@@ -1,0 +1,331 @@
+<div class="App">
+  <h1 class="inner">Angular Components</h1>
+  <div class="atom-container">
+    <h3 class="innerAtom">Guest-Config MMT :</h3>
+    <app-guest-config1 (PaxArray)="PaxArray($event)" [PerRoomTotal]="12" [AdultTotal]="12" [ChildTotal]="5" [DefAdult]="2" [DefChild]="0" [ChildAge]="12"></app-guest-config1>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Desktop-Calendar MMT :</h3>
+  <app-desktop-calendar (DatesArray)="DatesArray($event)"></app-desktop-calendar>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Desktop PaxConfig :</h3>
+    <app-guest-config
+    [maxChild]="maxChild"
+    [maxAdult]="maxAdult"
+    [minChild]="minChild"
+    [minAdult]="minAdult"
+    [defaultAdult]="defaultAdult"
+    [defaultChild]="defaultChild"
+    [maximumRooms]="maximumRooms"
+    [guestPerRooms]="guestPerRooms"
+    [totalPax]="totalPax"
+    [rooms]="rooms"
+    [count]="count"
+    [storageData]="storageData"
+    (PaxArrayOutData)="PaxArrayOutData($event)"
+    >
+    </app-guest-config>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Automatic Slider :</h3>
+    <app-slider [SlideOnHover]="false" [TransitionTime]="3000" [AutomaticSlide]="true" [ShowArrow]="false"
+      [ShowDots]="true" [ImgArray]="img" [Height]="height" [Width]="width"></app-slider>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Slider :</h3>
+    <app-slider [SlideOnHover]="false" [TransitionTime]="3000" [AutomaticSlide]="false" [ShowArrow]="true"
+      [ShowDots]="true" [ImgArray]="img" [Height]="height" [Width]="width"></app-slider>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Slide on Hover :</h3>
+    <app-slider [SlideOnHover]="true" [TransitionTime]="3000" [AutomaticSlide]="false" [ShowArrow]="true"
+      [ShowDots]="true" [ImgArray]="img" [Height]="height" [Width]="width"></app-slider>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Option selector :</h3>
+    <app-option-selector (UserSelectedOption)="UserSelectedOption($event)" [selectedOption]="selectedOption">
+    </app-option-selector>
+  </div>
+
+  <div class="atom-container">
+    <h3 class="innerAtom">Desktop Filter Tag :</h3>
+    <app-desktop-filtertag (childEvent)="displayData($event)" [parentData]="array"></app-desktop-filtertag>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Toggle View :</h3>
+     <app-toggle-view [images]="ToggleImages" (event)="handleEvent($event)"></app-toggle-view>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Drop Down with icon :</h3>
+    <app-dropdown (onDropDownSelection)="onDropDownSelection($event)" (handleDropDownToggle)="handleDropDownToggle()"
+      [selectedDropdownValue]="selectedDropdownValue" [isDropDownVisible]="isDropDownVisible"
+      [iconDropdown]="iconDropdown" [dropDownOptions]="dropDownOptions">
+    </app-dropdown>
+  </div>
+
+  <div class="atom-container">
+    <h3 class="innerAtom">Drop Down without icon :</h3>
+    <app-dropdown (onDropDownSelection)="onNormalDropDownSelection($event)"
+      (handleDropDownToggle)="handleNormalDropDownToggle()" [selectedDropdownValue]="selectedNormalDropdownValue"
+      [isDropDownVisible]="isNormalDropDownVisible" [iconDropdown]="normalDropdown" [dropDownOptions]="dropDownOptions">
+    </app-dropdown>
+  </div>
+  <div class="atom-container">
+    <h3 class="innerAtom">Call Out :</h3>
+    <app-calloutcomp  (onboxCLick)=hitText($event) LabelChanges="Sample 1" [HitId]="HitId1">
+
+      <div class="sample1">
+        <div id="callOut1" class="jp-callout-container darkBlue bottom" style="left:47px; max-width: 450px;">
+          <div class="jp-callout-tooltip">
+            <div class="jp-callout-content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit,</p>
+              <p>
+                Voluptate sint velit iure architecto provident dignissimos neque ea
+                ut
+              </p>
+              <p>
+                a aperiam non amet unde aut deserunt est, veritatis officia aliquam
+                eos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-calloutcomp>
+    <app-calloutcomp  (onboxCLick)=hitText($event) LabelChanges="Sample 2" [HitId]="HitId2">
+     <div class="sample2">
+        <div id="callOut2" class="jp-callout-container lightBlue bottom" style="left: 20px; max-width: 450px;">
+          <div class="jp-callout-tooltip">
+            <div class="jp-callout-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,Voluptate sint
+                velit iure architecto provident
+              </p>
+              <p>
+                dignissimos neque ea ut a aperiam non amet unde aut deserunt est,
+                veritatis officia aliquam eos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </app-calloutcomp>
+    
+    
+      <app-calloutcomp  (onboxCLick)=hitText($event) LabelChanges="Sample 3" [HitId]="HitId3">
+      <div class="sample3">
+        <div id="callOut3" class="jp-callout-container white bottom" style=" left:98.1333px; max-width: 450px;">
+          <div class="jp-callout-tooltip">
+            <div class="jp-callout-content">
+              <div>
+                Lorem ipsum dolor sit, amet consectetur
+                <ul style="text-align: left;">
+                  <li>adipisicing elit. Ullam, commodi.</li>
+                  <li>Quam, natus error, quia culpa ex fugit tempora</li>
+                  <li>vel ipsam eos numquam ad eius blanditiis temporibus</li>
+                  <li>sit aut cum asperiores?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-calloutcomp>
+    
+    <app-calloutcomp  (onboxCLick)=hitText($event) LabelChanges="Sample 4" [HitId]="HitId4">
+      <div class="sample4">
+        <div id="callOut4" class="jp-callout-container whiteBorder bottom" style=" left:20px; max-width: 450px;">
+          <div class="jp-callout-tooltip">
+            <div class="jp-callout-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,Voluptate sint
+                velit iure architecto provident
+              </p>
+              <p>
+                dignissimos neque ea ut a aperiam non amet unde aut deserunt est,
+                veritatis officia aliquam eos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-calloutcomp>
+    
+    <app-calloutcomp  (onboxCLick)=hitText($event) LabelChanges="Sample 5" [HitId]="HitId5">
+      <div class="sample5">
+        <div id="callOut5" class="jp-callout-container darkBlue bottom" style=" left:20px; max-width: 450px;">
+          <div class="jp-callout-tooltip">
+            <div class="jp-callout-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,Voluptate sint
+                velit iure architecto provident
+              </p>
+              <p>
+                dignissimos neque ea ut a aperiam non amet unde aut deserunt est,
+                veritatis officia aliquam eos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-calloutcomp>
+    
+    <app-calloutcomp  (onboxCLick)=hitText($event) LabelChanges="Sample 6" [HitId]="HitId6">
+      <div class="sample6">
+        <div id="callOut6" class="jp-callout-container lightBlue bottom" style=" left:20px; max-width: 450px;">
+          <div class="jp-callout-tooltip">
+            <div class="jp-callout-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,Voluptate sint
+                velit iure architecto provident
+              </p>
+              <p>
+                dignissimos neque ea ut a aperiam non amet unde aut deserunt est,
+                veritatis officia aliquam eos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-calloutcomp>
+    
+    <app-calloutcomp  (onboxCLick)=hitText($event) LabelChanges="Sample 7" [HitId]="HitId7">
+    
+      <div class="sample7">
+        <div id="callOut7" class="jp-callout-container white bottom" style="left:20px; max-width: 450px;">
+          <div class="jp-callout-tooltip">
+            <div class="jp-callout-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,Voluptate sint
+                velit iure architecto provident
+              </p>
+              <p>
+                dignissimos neque ea ut a aperiam non amet unde aut deserunt est,
+                veritatis officia aliquam eos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-calloutcomp>
+    
+    <app-calloutcomp  (onboxCLick)=hitText($event) LabelChanges="Sample 8" [HitId]="HitId8">
+      <div class="sample8">
+        <div id="callOut8" class="jp-callout-container whiteBorder bottom" style="left:20px; max-width: 450px;">
+          <div class="jp-callout-tooltip">
+            <div class="jp-callout-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,Voluptate sint
+                velit iure architecto provident
+              </p>
+              <p>
+                dignissimos neque ea ut a aperiam non amet unde aut deserunt est,
+                veritatis officia aliquam eos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </app-calloutcomp>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Collapse Expand :</h3>
+<app-collapse [data]="CollapseExpanddata" (events)="CollapseExpand($event)"></app-collapse>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Input CheckBox(With Link) :</h3>
+  <app-inputcheck-box [jsonData]="CheckBoxData" [IsDisabled]="false" (EventCalled)="EventCalled($event)" (IsChecked)="Checked($event)"></app-inputcheck-box>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Input CheckBox(Disabled) :</h3>
+  <app-inputcheck-box [jsonData]="CheckBoxData2" [IsDisabled]="true" (EventCalled)="EventCalled($event)" (IsChecked)="Checked($event)"></app-inputcheck-box>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Input CheckBox(Without Link) :</h3>
+  <app-inputcheck-box [jsonData]="CheckBoxData1" [IsDisabled]="false" (EventCalled)="EventCalled($event)" (IsChecked)="Checked($event)"></app-inputcheck-box>
+</div>
+<div class="atom-container">  
+  <h3 class="innerAtom">Slider Thumbnail(Automatic Slider) :</h3>
+<app-thumbnailslider [TransitionTime]="1500" (onHoverImage)="OnThumbnailHover($event)" [CardsVisible]="4" [OnShowArrow]="false" [AutomaticSlider]="true" [OnHoverEvent]="false" [OutsideWidth]="100" [Height]="180" [ThumbnailSliderImges]="ThumbnailSliderImges"></app-thumbnailslider>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Slider Thumbnail(Slider) :</h3>
+<app-thumbnailslider [TransitionTime]="1500" (onHoverImage)="OnThumbnailHover($event)" [CardsVisible]="3" [OnShowArrow]="true" [AutomaticSlider]="false" [OnHoverEvent]="false" [OutsideWidth]="100" [Height]="280" [ThumbnailSliderImges]="ThumbnailSliderImges"></app-thumbnailslider>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Thumbnail Component :</h3>
+  <app-thumbnail-component [ThumbnailSliderImges]="ThumbnailSliderImges" [Width]="300" [Height]="280" [TransitionTime]="1500" [CardsVisible]="4"></app-thumbnail-component>
+
+</div>
+
+<div class="atom-container">
+  <h3 class="innerAtom">Radio Button :</h3>
+  <app-inputradio-button Disable='true' RadioLabel='Option 1' (radioValue)="radioValue($event)"></app-inputradio-button>
+  <app-inputradio-button Disable='false' RadioLabel='Option 2' (radioValue)="radioValue($event)"></app-inputradio-button>
+  <app-inputradio-button Disable='false' RadioLabel='Option 3' (radioValue)="radioValue($event)"></app-inputradio-button>
+</div>
+<div class="atom-container">
+<h3 class="innerAtom">Desktop Google-Map :</h3>
+  <app-google-map>
+    <agm-map [latitude]='lat' [longitude]='lng' [fullscreenControl]='true' [mapTypeControl]='true'
+    [scrollwheel]="null" (mapClick)="onMapClick($event)">
+    <agm-marker *ngFor="let hotel of hotelsArray" [latitude]='hotel.lat' [longitude]='hotel.lng' 
+        (markerClick)="onMarkerClick(hotel.title)"  [iconUrl]="icon" >
+
+        <agm-info-window>
+            <div class="image"><img src={{hotel.imgUrl}} style="width:250px;"></div>
+            <strong>{{hotel.title}}</strong>
+          </agm-info-window>
+
+    </agm-marker>
+</agm-map>
+  </app-google-map>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Hotel-List Card :</h3>
+<app-hotellist-card [card_list]="card_list"></app-hotellist-card>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Price-Range Slider :</h3>
+<ng5-slider [(value)]= "minValue" [(highValue)]="maxValue" [options]="Options" (userChange)="onRangeSliderChange()"></ng5-slider>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">SliderContentMobile :</h3>
+  <p><input class="innerinput" type="number" [(ngModel)]="value1" value="value1"></p>
+  <ng5-slider [options]="options"  style="margin-bottom: 4rem;" [(value)]="value1" (userChange)="onSliderChange()"></ng5-slider>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">RangeSelector :</h3>
+  <ng5-slider  [(value)]="value2" [options]="options2" (userChange)="onSliderTickChange()"></ng5-slider></div>
+<div class="atom-container">
+  <h3 class="innerAtom">BreadCumb :</h3>
+ <app-bread-crumb [BreadCumbData]="BreadCumbData" (HitBreadCumb)="HitBreadCumb($event)"></app-bread-crumb>
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Toggle-Button :</h3>
+ <app-togle-button [disable]='Toggledisable' ToggleLable='Subscribe' (toggleValue)="getToggleValue($event)"></app-togle-button>
+ <app-togle-button [disable]='Toggledisable1' ToggleLable='Subscribe' (toggleValue)="getToggleValue($event)"></app-togle-button>
+
+</div>
+<div class="atom-container">
+  <h3 class="innerAtom">Progress-Indicator :</h3>
+  <div style="display: flex">
+  <app-progress-indicator Value='25'></app-progress-indicator>
+  <app-progress-indicator Value='50'></app-progress-indicator>
+  <app-progress-indicator Value='75'></app-progress-indicator>
+  <app-progress-indicator Value='100'></app-progress-indicator>
+</div>
+</div>
+
+<div class="atom-container">
+  <h3 class="innerAtom">Profile Sidebar :</h3>
+  <app-profile-sidebar [data]="ProfileSidebar" (events)="ProfileSidebarFunction($event)" ></app-profile-sidebar>
+  </div>
+
+  <div class="atom-container">
+    <h3 class="innerAtom">Mobile Typing Calendar :</h3>
+    <app-mobiletyping-calendar (ValidateDate)='ValidateDate($event)' ValidationYear='1'></app-mobiletyping-calendar>
+    </div>
+
+</div>

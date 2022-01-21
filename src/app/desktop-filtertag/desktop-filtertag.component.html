@@ -1,0 +1,10 @@
+<div >
+    <div  class="jp-desktop-filter-tag-container" id="focus">
+        <span *ngFor="let result of parentData; let i = index;" title="Thailand" role="presentation" class="jp-desktop-filter-tag-label">
+            <span>{{result}}</span>
+            <a class="jp-cross-icon-container jp-crossIcon" role="button" tabindex="0" title="Close Thailand"
+                aria-label="" href="javascript:;" (click) = "removeData(i)">&nbsp;
+            </a>
+        </span>
+    </div>
+</div>

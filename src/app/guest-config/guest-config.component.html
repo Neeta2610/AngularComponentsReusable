@@ -1,0 +1,62 @@
+<div class='jp-paxcongig-maincontainer' (appEventClick)="ClosePopup()">
+    <div  [className]="!PopupVisible?'input-dropdownarrow':'input-dropduparrow'" >
+        <input type='text' class='jp-paxcongig-container' [(ngModel)]="Inputvalue" (click)="OpenPopup()" readonly/>
+    </div>
+      <div *ngIf='PopupVisible' class='pexconfig-megadrop'>
+            <div class='allmembers-block'>
+                  <div class='pax-padding' *ngFor="let room of rooms; let i = index" key={index}>
+                    <div class='pex-room'>
+                        <div class='pex-room-title'>
+                            <span class='roomsubtitle' aria-live='assertive'>Room{{i + 1}}</span>
+                        </div>
+                        <div class='divider'></div>
+                    </div>
+                    <div [className]="!room.disableDiv ? 'jp-divdisplay-block' : 'jp-divdisplay'">
+                      <div class='pex-room-data'>
+                          <div class='leftpanel'><p><span>Adult</span>(12 yrs & above)</p></div>
+                          <div class='rightpanel'>
+                              <button (click)="decrement(i)"  [className]="room.adultdecrement ? 'minusimage' : 'minusimage2'" ></button>
+                              <div class='count' >{{room.adult}}</div>
+                              <button (click)="increment(i)" [className]="room.adultincrement ? 'addimage' : 'addimage2'"  ></button>
+                          </div>
+                      </div>
+                      <div class='pex-room-data'>
+                          <div class='leftpanel'><div class='jp-childbold'><div [className]="room.fontimg ? 'child-bold' : 'child-regular'">Children</div> (2 - 12 yrs)</div></div>
+                          <div class='rightpanel-2'>
+                              <button (click)="decrementch(i)"  [className]="room.childecrement ? 'minusimage' : 'minusimage2'"  ></button>
+                              <div class='count' aria-live='assertive' >{{room.children}}</div>
+                              <button (click)="incrementch(i)"  [className]="room.childincrement ? 'addimage' : 'addimage2'" ></button>
+                          </div>
+                      </div> 
+                        <div class='pex-childmaindropdown'>
+                            <div *ngFor="let child of room.child; let j = index" class='pex-childdropdown '  key={j} >
+                                <p class='additionalchild' >Child{{j + 1}} Age</p>
+                                <div>
+                                <select class="ageSelectBox" (change)="onNormalDropDownAgeSelection(i,j,$event.target.value)">
+                                    <option *ngFor="let Age2 of paxAgeOptions;index as Age" [value]="Age2.value" [selected]="child.age===Age2.value?true:false">{{Age2.label}}</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+  
+  
+                    <div [className]="room.disableDiv ? 'jp-divdisplay-block-2' : 'jp-divdisplay'">
+                      <div class=' pex-room-title'>
+                          <div class='collapsemaindiv'>
+                              <p class='collapsetitile'>{{room.adult}} Adult, {{room.children}} Children</p>
+                              <div class='buttontotheright'>
+                                  <button class='editbtn' (click)="enableDiv(i)" >Edit</button>
+                                  <button (click)="removeRooms(i)"  class='removebtn' >Remove</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+              </div>  
+          <div class='addmorebtn-block'>
+            <button [className]= "buttoncolor?'jp-addmorebtn' : 'jp-addmorebtn1'" (click)="addRooms()"> + Add more room</button>
+        </div>
+      </div>
+    </div>

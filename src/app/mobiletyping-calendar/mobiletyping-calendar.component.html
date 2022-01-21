@@ -1,0 +1,11 @@
+<div class="jp-mobile-typing-calendar">
+    <input type="text" id='firstNameInput' maxlength="10"
+     placeholder="ENTER DATE OF BIRTH IN DD/MM/YYYY FORMAT"
+        spellcheck="false"
+     (input)="changingin($event)" 
+      value="{{data}}"
+      onkeypress="return  (event.charCode>=48  &&    event.charCode <= 57) && event.charCode!==32 "
+    (click)="onStartfocus($event)" 
+    (blur)="onBlurDate($event)"/>
+    <p [className]="ErrorFlag?'ErrorMessage':'ErrorHidden'">Invalid Date</p>
+</div>

@@ -1,0 +1,12 @@
+<nav>
+    <ul class="jp-breadcrumbs">
+        <li *ngFor="let item of BreadCumbData,let i = index">
+            <ng-container *ngIf="item.IsClickable ; else elseTemplate">
+                <a href={{item.url}} tabindex="0" (click)="onClick(item)">{{item.name}}</a>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <a>{{item.name}}</a>
+            </ng-template>
+        </li>
+    </ul>
+</nav>

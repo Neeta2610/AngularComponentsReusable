@@ -1,0 +1,10 @@
+<div class="jp-input-text-container" id="txtBox1">
+    <label id="txtSample1Label">{{LabelChanges}}
+      <input  placeholder="" (click)="onClick()" 
+        autocomplete="off" (blur)="onBlur()"
+        (keyup)="getTxtValue($event.target.value)" />
+    </label>
+  </div>
+  <div *ngIf="show">
+    <ng-content></ng-content>
+  </div>

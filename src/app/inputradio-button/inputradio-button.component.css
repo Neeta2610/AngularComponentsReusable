@@ -1,0 +1,43 @@
+
+.jp-radio-btn-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 18px;
+    letter-spacing: 0.26px;
+    color: #34495e;
+    padding: 1px 0 0 36px;
+    margin: 14px 0;
+}
+
+.jp-radio-btn-container.disabled {
+    cursor: default;
+    color: #5d5b62;
+    opacity: 0.54;
+}
+
+.jp-radio-btn-container input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9b9a9e;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 16px;
+    position: relative;
+    top: 4px;
+}
+
+.jp-radio-btn-container input:checked {
+    border: 4px solid white;
+    background-color: #ae285d;
+    box-shadow: 0 0 0 2px #ae285d;
+}

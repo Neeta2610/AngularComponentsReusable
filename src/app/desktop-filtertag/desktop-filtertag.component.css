@@ -1,0 +1,39 @@
+.jp-desktop-filter-tag-container .jp-desktop-filter-tag-label{
+    border-radius: 3px;
+    border: solid 1px #ae285d;
+    background-color: #f8f4f4;
+    padding: 0px 9px 0px 16px;
+    margin-right: 14px;
+    display: inline-block;
+    max-width: 246px;
+}
+
+.jp-desktop-filter-tag-container .jp-desktop-filter-tag-label span{
+    font-family: Montserrat-Medium;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #ae285d;
+    margin-right: 8px;
+    height: 20px;
+    display: inline-block;
+    margin: 6px 8px 6px 0;
+    max-width: 212px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.jp-desktop-filter-tag-container .jp-cross-icon-container{
+    display: inline-block;
+    background: url(../../assets/img/ic-close.svg);
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+    outline: none;
+    margin-top: 3px;
+    margin-bottom: 4px;
+}

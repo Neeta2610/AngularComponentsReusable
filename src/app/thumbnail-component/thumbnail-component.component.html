@@ -1,0 +1,6 @@
+<div [style.height]='height' [style.width]='width'>
+    <div class="InnerThumbNailContainer"  [style.width]='width' [style.height]='InnerHeight' >
+        <img src="{{innerimage}}">
+    </div>
+        <app-thumbnailslider [TransitionTime]="TransitionTime" (onHoverImage)="OnThumbnailHover($event)" [CardsVisible]="CardsVisible" [OnShowArrow]="false" [AutomaticSlider]="true" [OnHoverEvent]="true" [OutsideWidth]="100" [Height]="InnerHeight1" [ThumbnailSliderImges]="ThumbnailSliderImges"></app-thumbnailslider>
+</div>

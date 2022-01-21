@@ -1,0 +1,71 @@
+
+.jp-mobile-typing-calendar input {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: solid 1px #5d5b62;
+    background-color: #ffffff;
+    width: 100%;
+    text-overflow: ellipsis;
+    padding: 14px 16px;
+    font-family: Montserrat-Bold;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.43;
+    letter-spacing: 0.8px;
+    color: #28262c;
+    font: 900 18px Montserrat-Bold;
+}
+
+.jp-mobile-typing-calendar input:focus {
+    outline: none;
+    color: #28262c;
+    font-family: Montserrat-Bold;
+    font-weight: bold;
+
+}
+
+
+
+.jp-mobile-typing-calendar input::placeholder {
+    font-family: Montserrat-Light;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: 0.3px;
+    color: grey;
+    font: 300 14px Montserrat-Light;
+}
+.jp-mobile-typing-calendar .ErrorMessage{
+color: red;
+}
+.jp-mobile-typing-calendar .ErrorHidden{
+    display: none ;
+}
+
+.jp-mobile-typing-calendar input:-ms-input-placeholder {
+    font-family: Montserrat-Light;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: 0.3px;
+    color: #435b73;
+    font: 300 14px Montserrat-Light;
+}
+.jp-mobile-typing-calendar input::-ms-input-placeholder {
+    font-family: Montserrat-Light;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: 0.3px;
+    color: #435b73;
+    font: 300 14px Montserrat-Light;
+}

@@ -1,0 +1,126 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+.jp-desktop-account-container{
+    width: 309px;
+    height: 964px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    }
+    
+    .jp-desktop-account-container .jp-user-info-div{
+    padding: 42px 41px 36px 41.5px;
+    text-align: center;
+    border-bottom: 1px solid rgb(221,221,221,0.54);
+    }
+
+    .jp-desktop-account-container .jp-user-info-div div{
+      outline: none
+      }
+    
+    .jp-desktop-account-container .jp-user-image{
+    width: 226.5px;
+    height: 227px;
+    margin-bottom: 34px;
+    }
+    .jp-desktop-account-container .jp-user-image img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .jp-desktop-account-container .jp-user-name {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #002642;
+    }
+    
+    .jp-desktop-account-container .jp-member-type {
+    font-family: Montserrat-Bold;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ae285d;
+    margin: 8px 0;
+    }
+    
+    .jp-desktop-account-container .jp-number {
+    font-family: Montserrat-Bold;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #002642;
+    }
+    
+    .jp-desktop-account-container .jp-element-link-div {
+    padding: 24px 0 40px;
+    list-style: none;
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    color: #435b73;
+    }
+
+
+    .jp-desktop-account-container .jp-element-link-div li {
+        padding: 0 48px;
+        margin-bottom: 24px;
+        cursor: pointer;
+        }
+    
+      .jp-desktop-account-container .jp-element-link-div .jp-desktop-link-active{
+        background-color: #f8f4f4;
+        padding: 16px 48px 18px;
+        font-family: Montserrat-Bold;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.13;
+        letter-spacing: normal;
+        color: #2a3c4d;
+        margin-bottom: 6px;
+        margin-top: -16px;
+        border-right: 3px solid #ae285d;
+      }
+
+
+      .jp-desktop-account-container .jp-element-link-div .jp-desktop-link-active span,
+      .jp-desktop-account-container .jp-element-link-div .jp-desktop-link-inactive span
+      {
+       outline: none
+      }
+
+      .jp-desktop-account-container .jp-user-info-div div{
+        outline: none
+        }
+
+      li.jp-desktop-link-inactive.jp-horizontal-line {
+        border-bottom: 1px solid rgb(221,221,221,0.54);
+        pointer-events: none;
+        position: relative;
+        top: -1px;
+        margin-bottom: 20px;
+      }
+
+      .jp-desktop-account-container .jp-element-link-div .jp-desktop-link-active span a,
+      .jp-desktop-account-container .jp-element-link-div .jp-desktop-link-inactive span a
+      {
+       text-decoration: none;
+       color: #435b73;
+      }

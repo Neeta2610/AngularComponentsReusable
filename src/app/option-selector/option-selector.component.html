@@ -1,0 +1,5 @@
+<div id='innerdata'  class='jp-desktop-option-selector-container' >
+    <span *ngFor="let option of selectedOption; index as i" [className]="selectedId === i ? 'active' : 'jp-desktop-option-selector-label'" (click)="onSelect(i)">
+        <span>{{option.name}}</span>
+    </span>
+</div>

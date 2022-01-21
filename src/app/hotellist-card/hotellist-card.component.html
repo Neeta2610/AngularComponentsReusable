@@ -1,0 +1,82 @@
+<div>
+    <a class="disabledLink" href="" target="_blank" rel="nofollow" *ngFor="let result of card_list">
+      <div class="listingRow  bdr">
+        <div class="makeFlex flexOne padding20 relative">
+          <div class="imgGalleryCont">
+            <div class="imgCont">     
+            <app-thumbnail-component [ThumbnailSliderImges]="result.HotelListImg" [Width]="243" [Height]="182" [TransitionTime]="1500" [CardsVisible]="4"></app-thumbnail-component>
+          </div>
+          </div>
+          <div class="flexOne appendLeft20">
+            <div class="makeFlex spaceBetween">
+              <div>
+                <p class="latoBlack font22 blackText appendBottom12 " id="hotel_name" itemprop="name">
+                  <span id="hotel">{{result.hotel}}</span>
+                  <star-rating class="appendLeft10" value="{{result.ratings}}" totalstars="5" checkedcolor="#ae285d"
+                    uncheckedcolor="grey" size="15px" readonly=true>
+                  </star-rating>
+  
+                </p>
+  
+                <p itemprop="address" class="font12 grayText latoBold appendBottom5">{{result.location}}</p>
+                <p class="font12 latoBold appendBottom15 darkText">{{result.distance}}</p>
+                <ul class="tags font11 latoBold appendBottom10 darkText">
+                  <li class="tags li" *ngFor="let item of result.type"> {{item}}</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="amenList darkText">
+              <li>
+                <div class="iconAmenity appendRight5"><img src="" alt="">
+                </div>
+                <span class="font12" *ngFor="let item of result.facilities">
+                  &nbsp;{{item}} &nbsp;&nbsp;
+                </span>
+              </li>
+            </ul>
+            <p class="font12 appendBottom10">
+              <span class="grayText">
+                <strong>More Options: </strong>
+              </span>
+              <span class="greenText" *ngFor="let item of result.more_options">
+                | {{item}}
+              </span>
+            </p>
+          </div>
+          <div class="priceDetails textRight">
+            <div class="priceDetailsTop">
+              <ul class="includes"></ul>
+            </div>
+            <div>
+              <div class="padding20 makeFlex column">
+                <p class="makeFlex hrtlCenter right appendBottom10">
+                  <span class="redText font12">
+                    <span>Save
+                    </span>
+                    <span class="latoBold" id="hlistpg_hotel_saved_price">
+                      {{result.price - result.after_discount | currency: 'INR' : 'code'}}
+                    </span>
+                  </span>
+                  <span class="discountIcon relative appendLeft5">
+                    <span class="latoBold font11 whiteText discountText" id="hlistpg_hotel_saved_price_percentage">
+                      {{result.discount}}%
+                    </span>
+                  </span>
+                </p>
+                <p class="grayText font16 lineThrough appendBottom5">
+                  {{result.price | currency: 'INR': 'code'}}
+                </p>
+                <p class="latoBlack font26 blackText appendBottom5">
+                  {{result.after_discount | currency: 'INR' : 'code'}}
+                </p>
+                <p class="font12 grayText appendBottom5">
+                  {{result.duration}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  </div>

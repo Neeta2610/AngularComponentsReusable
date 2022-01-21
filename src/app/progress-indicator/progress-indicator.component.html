@@ -1,0 +1,15 @@
+<div role="progressbar" class="jp-progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 65px; margin: 10px;">
+    <svg class="CircularProgressbar " viewBox="0 0 100 100">
+    <path class="CircularProgressbar-trail" d="
+    M 50,50
+    m 0,-47.5
+    a 47.5,47.5 0 1 1 0,95
+    a 47.5,47.5 0 1 1 0,-95
+  " stroke-width="5" fill-opacity="0"></path><path class="CircularProgressbar-path" d="
+    M 50,50
+    m 0,-47.5
+    a 47.5,47.5 0 1 1 0,95
+    a 47.5,47.5 0 1 1 0,-95
+  " stroke-width="5" fill-opacity="0" style="stroke: rgb(19, 113, 186); stroke-linecap: butt; transition: stroke-dashoffset 0.5s ease 0s; stroke-dasharray: 298.451px, 298.451px;" [ngStyle]="{'stroke-dashoffset': strokeValue}"></path><text class="CircularProgressbar-text" style="fill: rgb(87, 18, 56); font-size: 30px; font-weight: bold; dominant-baseline: central;" x="50" y="50">{{percentValue}}%</text>
+</svg>
+</div>

@@ -1,0 +1,539 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Lato,sans-serif;
+    /* color: #4a4a4a; */
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.code {
+    color: #4a4a4a;
+}
+.hsw_inputBox {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-right: 0;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.hsw_inputBox.dates {
+    width: 157px;
+    min-height: 97px;
+   
+    position: relative;
+}
+.CheckInbox{
+    border-left: solid 1px #e7e7e7;
+    border-top: solid 1px #e7e7e7;
+    border-bottom: solid 1px #e7e7e7;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: white;
+}
+.CheckOutbox{
+    border: solid 1px #e7e7e7;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: white;
+}
+.CheckInbox1{
+    border-left: solid 1px #e7e7e7;
+    border-top: solid 1px #e7e7e7;
+    border-bottom: solid 1px #e7e7e7;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: antiquewhite;
+}
+.CheckOutbox1{
+    border: solid 1px #e7e7e7;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: antiquewhite;
+}
+.hsw_inputBox {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    position: relative;
+}
+.innerCheckOutbox{
+    padding-top: 8px;
+    padding-left: 21px;
+}
+.innerCheckInbox{
+    padding-top: 8px;
+    padding-left: 21px;
+}
+.activeWidget.hsw_inputBox {
+    opacity: 1;
+    background: antiquewhite
+}
+.lbl_input {
+    text-transform: uppercase;
+}
+.appendBottom5 {
+    margin-bottom: 5px;
+}
+.latoBold {
+    font-weight: 700;  
+}
+
+.latoBold1 {
+    font-weight: 700;  
+    color: #ae285d;
+}
+.font20 {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.blackText {
+    color: #000;
+}
+.hsw_inputBox .lineHeight36 {
+    line-height: 36px;
+}
+
+.latoBlack {
+    font-weight: 900;
+}
+.font30 {
+    font-size: 30px;
+    line-height: 30px;
+}
+.blackText {
+    color: #000;
+}
+.hsw_inputBox.dates .lbl_input:after{
+    border: solid #ae285d;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    content: "";
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    vertical-align: top;
+    margin: 3px 0 0 8px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.hsw_inputBox.dates .lbl_input1:after{
+    border: solid #ae285d;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    content: "";
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    vertical-align: top;
+    margin: 6px 0 0 8px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+.DesktopCalendar{
+    display: inline-flex;
+}
+
+
+/* DAteContainer */
+.datePickerContainer {
+    width: 625px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50px;
+    /* top: 30px; */
+    z-index: 999999;
+    margin-top: 33px;
+}
+
+.dayPickerHotelWrap .RangeExample {
+    display: block;
+}
+.dayPickerHotelWrap .RangeExample .dayPickerHeader {
+    /* border-bottom: solid 2px #e7e7e7; */
+    padding: 13px 10px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+.makeFlex {
+    display: flex;
+}
+.appendRight30 {
+    margin-right: 30px;
+}
+
+.latoBold {
+    font-weight: 700;
+}
+.font16 {
+    font-size: 16px;
+    line-height: 16px;
+}
+.appendRight10 {
+    margin-right: 10px;
+}
+.widgetSprite {
+    background: url(//imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/desktop/spriteModifySearch.png) no-repeat;
+    display: inline-block;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px;
+    font-size: 0px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+.widgetSprite.icCalendar {
+    width: 10px;
+    height: 10px;
+    background-position: -5px -5px;
+}
+.appendBottom8 {
+    margin-bottom: 8px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+.font16 {
+    font-size: 16px;
+    line-height: 16px;
+}
+.dateFiled.active .selectedDateField {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: antiquewhite;
+    position: relative;
+}
+.dateFiled.active .selectedDateField:after {
+    width: 100%;
+    height: 3px;
+    background: #ae285d;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+}
+
+/* INside Calendar CODE */
+
+.DayPicker {
+    display: inline-block;
+    font-size: 1rem;
+}
+.dayPickerHotelWrap .DayPicker-Months {
+    width: -webkit-calc(100%);
+    width: -moz-calc(100%);
+    width: calc(100%);
+    /* -webkit-box-flex: 1; */
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.DayPicker-Months {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.DayPicker-wrapper {
+    outline: 0;
+}
+.DayPicker-wrapper {
+    position: relative;
+    flex-direction: row;
+    padding-bottom: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.dayPickerHotelWrap .DayPicker-NavBar .DayPicker-NavButton--prev {
+    background-image: url('../../assets/img/pagination-left-arrow.svg');
+    top: 13px;
+    left: 29px;
+    cursor: pointer;
+    z-index: 100;
+    width: 30px;
+    height: 19px;
+    outline: 0;
+    border: 0;
+}
+.dayPickerHotelWrap .DayPicker-NavBar .DayPicker-NavButton--prev1 {
+    background-image: url('../../assets/img/pagination-left-arrow_Disable.svg');
+    top: 13px;
+    left: 29px;
+    cursor: pointer;
+    z-index: 100;
+    width: 30px;
+    height: 19px;
+    outline: 0;
+    border: 0;
+}
+.dayPickerHotelWrap .DayPicker-NavBar .DayPicker-NavButton--next {
+    top: 13px;
+    right: 29px;
+    cursor: pointer;
+    z-index: 100;
+    width: 30px;
+    height: 19px;
+    background-image: url('../../assets/img/pagination-right-arrow.svg');
+    outline: 0;
+    border: 0;
+}
+.dayPickerHotelWrap .DayPicker-NavBar .DayPicker-NavButton--next1 {
+    top: 13px;
+    right: 29px;
+    cursor: pointer;
+    z-index: 100;
+    width: 30px;
+    height: 19px;
+    background-image: url('../../assets/img/pagination-right-arrow_Disable.svg');
+    outline: 0;
+    border: 0;
+}
+
+.DayPicker-NavButton--prev {
+    margin-right: 1.5em;
+    background-image: url('../../assets/img/pagination-left-arrow.svg');
+}
+.DayPicker-NavButton--next {
+    background-image: url('../../assets/img/pagination-right-arrow.svg');
+}
+
+.DayPicker-NavButton {
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    left: auto;
+    display: inline-block;
+    margin-top: 2px;
+    width: 1.25em;
+    height: 1.25em;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    color: #8B9898;
+    cursor: pointer;
+}
+
+
+ /* month css ====================>>>>>>>>>>>>>>>> */
+ .dayPickerHotelWrap .DayPicker-Month {
+    /* flex: 1; */
+    width: 45%;
+    /* margin: 0 16px 16px 0!important; */
+}
+.dayPickerHotelWrap .DayPicker-Caption > div {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #000;
+    text-align: center;
+}
+.dayPickerHotelWrap .DayPicker-Caption > div > span {
+    font-weight: 300!important;
+    font-size: 22px;
+    line-height: 20px;
+    margin-left: 5px;
+}
+.DayPicker-Caption > div {
+    font-weight: 500;
+    font-size: 1.15em;
+}
+.DayPicker-Month {
+    display: table;
+    margin: 0 1em;
+    margin-top: 1em;
+    border-spacing: 0;
+    border-collapse: collapse;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.dayPickerHotelWrap .DayPicker-Caption {
+    margin-bottom: 25px;
+}
+.dayPickerHotelWrap .DayPicker-Caption > div {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #000;
+    text-align: center;
+}
+
+
+.DayPicker-Caption > div {
+    font-weight: 500;
+    font-size: 1.15em;
+}
+
+.DayPicker-Caption {
+    display: table-caption;
+    margin-bottom: 0.5em;
+    padding: 0 0.5em;
+    text-align: left;
+}
+.DayPicker-Weekdays {
+    display: table-header-group;
+    margin-top: 1em;
+}
+.DayPicker-WeekdaysRow {
+    display: table-row;
+}
+ .dayPickerHotelWrap .DayPicker-Weekday {
+    font-weight: bold;
+}
+.DayPicker-Weekday abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.DayPicker-Weekday {
+    display: table-cell;
+    padding: 0.5em;
+    color: #8B9898!important;
+    text-align: center;
+    font-size: 0.875em;
+}
+.DayPicker-Body {
+    display: table-row-group;
+}
+.DayPicker-Week {
+    display: table-row;
+}
+
+.DayPicker-Day.DayPicker-Day--outside {
+    background-color: transparent !important;
+    color: transparent !important;
+}
+
+
+
+.DayPicker-Day--disabled {
+    color: #DCE0E0;
+    cursor: default;
+    /* background-color: #eff1f1; */
+}
+.DayPicker-Day--outside {
+    color: #8B9898;
+    cursor: default;
+}
+
+.DayPicker-Day.DayPicker-Day--start  {
+    background-color: #ae285d;
+    color: #fff!important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+
+
+.DayPicker-Day--disabled {
+    color: #DCE0E0 !important;
+    cursor: default!important;
+}
+
+.DayPicker-Day--disabled {
+    color: #DCE0E0 !important;
+    cursor: default!important;
+
+}
+
+.DayPicker-Day--disabled {
+    color: #DCE0E0;
+    cursor: default;
+    /* background-color: #eff1f1; */
+}
+
+.DayPicker-Day {
+    display: table-cell;
+    padding: 0.5em;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+.dayPickerHotelWrap .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    background-color:antiquewhite;
+    color: #000;
+}
+
+
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    position: relative;
+    background-color: #4A90E2;
+    color: #F0F8FF;
+}
+.DayPicker-Day--end.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    background-color: #ae285d;
+    color: #fff;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+ .dayPickerHotelWrap .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    background-color: antiquewhite;
+    color: #000;
+}
+ .DayPicker-Day.DayPicker-Day--end {
+    background-color: #ae285d;
+    color: #fff !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+ .dayPickerHotelWrap .DayPicker-Day {
+    height: 44px;
+    color: #000;
+    outline: 0;
+    border: 0;
+    width: 40px;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    position: relative;
+    background-color: #4A90E2;
+    color: #F0F8FF;
+}
+

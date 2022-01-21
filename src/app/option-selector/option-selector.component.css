@@ -1,0 +1,107 @@
+.jp-desktop-option-selector-container {
+    font-family: Montserrat-Regular;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #435b73;
+    width: fit-content;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 1px #dddddd;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: 10px;
+    padding-right: 7px;
+}
+
+.jp-desktop-option-selector-container span.active {
+    display: inline-block;
+    text-align: center;
+    background-color: #ae285d;;
+    margin: -9px 0;
+    font-family: Montserrat-Bold;
+    color: #fff;
+    border-radius: 3px;
+    padding: 9px 6px;
+    outline: none;
+}
+
+.jp-desktop-option-selector-container span.jp-desktop-option-selector-label {
+    display: inline-block;
+    text-align: center;
+    padding: 7px 7px;
+    outline: none;
+}
+.jp-desktop-option-selector-container span.jp-desktop-option-selector-label:hover{
+    background-color: #f8f4f4;
+    margin: -7px 0px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  
+  }
+
+
+
+/* For Mobile */
+/* .jp-mobile-option-selector-container {
+    padding-left: 21px;
+} */
+
+.jp-mobile-option-selector-container .jp-mobile-option-selector-label{
+    background-color: #ffffff;
+    margin-right: 8px;
+    display: inline-block;
+    border-radius: 20px;
+    border: solid 1px #1371ba;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    outline: none;
+}
+
+.jp-mobile-option-selector-container .jp-mobile-option-selector-label-active{
+    background-color: #ae285d;;
+    margin-right: 8px;
+    display: inline-block;
+    border-radius: 20px;
+    border: solid 1px #ae285d;;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    outline: none;
+}
+
+.jp-mobile-option-selector-container .jp-mobile-option-selector-label-active span{
+    white-space: nowrap;
+    font-family: Montserrat-Bold;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #fff;
+    margin: 11px 13px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 18px;
+}
+
+.jp-mobile-option-selector-container .jp-mobile-option-selector-label span{
+    white-space: nowrap;
+    font-family: Montserrat-Bold;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #1371ba;
+    margin: 11px 13px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 18px;
+ 
+}
